@@ -1,0 +1,36 @@
+flowchart LR
+  JOG(["👤 Jogador"])
+  ADM(["👤 Administrador"])
+  TMP(["⏱ Temporizador"])
+
+  subgraph ART["AtenderRequisitosTecnologia"]
+    direction TB
+    U1(["EfetuarLogonSistema"])
+    U2(["EfetuarLogoffSistema"])
+    U3(["EfetuarAlteracaoSenha"])
+    U4(["RecuperarSenha"])
+    U5(["CadastrarUsuario"])
+    U6(["CadastrarPerfilAcesso"])
+    U7(["CadastrarFuncaoSistema"])
+    U8(["EfetuarBackupJogadoresColecoes"])
+    U9(["RestaurarBackup"])
+    U10(["GerarHistoricoPartidasEncerradas"])
+    U11(["EfetuarLimpezaPartidasAbandonadas"])
+    U12(["ConsultarAjuda"])
+    U13(["ConsultarLogAuditoria"])
+  end
+
+  JOG --- U1
+  JOG --- U2
+  JOG --- U3
+  JOG --- U4
+  JOG --- U12
+  ADM --- U5
+  ADM --- U6
+  ADM --- U7
+  ADM --- U8
+  ADM --- U9
+  ADM --- U13
+  TMP --- U8
+  TMP --- U10
+  TMP --- U11

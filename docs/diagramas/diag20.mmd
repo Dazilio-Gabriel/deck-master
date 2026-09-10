@@ -1,0 +1,129 @@
+classDiagram
+  direction LR
+
+  class Jogador {
+    apelido
+    nomeCompleto
+    email
+    dataNascimento
+    endereco (item de grupo)
+    telefone* (multivalorado)
+    saldoCristais
+    saldoFragmentos
+    nivel
+    experiencia
+    cadastrar()
+    consultarPerfil()
+    alterarPerfil()
+  }
+
+  class Carta {
+    nome
+    textoRegra
+    custoMana
+    raridade
+    elemento*
+    expansao
+    ilustracao
+    descrever()
+  }
+
+  class Criatura {
+    ataque
+    defesa
+    tipoCriatura
+  }
+
+  class Feitico {
+    efeito
+    instantaneo
+    alvo
+  }
+
+  class Terreno {
+    recursoGerado
+    quantidadeRecurso
+  }
+
+  class Colecao {
+    quantidade
+    dataPrimeiraObtencao
+  }
+
+  class Deck {
+    nome
+    formato
+    dataCriacao
+    montar()
+    validar()
+  }
+
+  class ComposicaoDeck {
+    quantidade
+  }
+
+  class Pacote {
+    nome
+    precoCristais
+    quantidadeCartas
+    comprar()
+    abrir()
+  }
+
+  class Partida {
+    dataHoraInicio
+    dataHoraFim
+    modo
+    situacao
+    iniciar()
+    encerrar()
+  }
+
+  class Participacao {
+    pontosVidaFinais
+    venceu
+    deckUtilizado
+  }
+
+  class Turno {
+    numero
+    dataHoraInicio
+    dataHoraFim
+  }
+
+  class Jogada {
+    sequencia
+    tipo
+    alvo
+    dataHora
+  }
+
+  class Temporada {
+    nome
+    dataInicio
+    dataFim
+    apurarRanking()
+  }
+
+  class Pontuacao {
+    pontos
+    vitorias
+    derrotas
+    divisao
+  }
+
+  Carta <|-- Criatura
+  Carta <|-- Feitico
+  Carta <|-- Terreno
+
+  Jogador "*" -- "*" Carta : Colecao
+  Colecao .. Jogador
+  Deck "*" -- "*" Carta : ComposicaoDeck
+  Jogador "1" -- "*" Deck : monta
+  Jogador "*" -- "*" Partida : Participacao
+  Jogador "*" -- "*" Temporada : Pontuacao
+  Jogador "1" -- "*" Pacote : adquire
+  Partida "1" -- "*" Turno : sequencia
+  Turno "1" -- "*" Jogada : contem
+  Jogada "*" -- "0..1" Carta : utiliza
+  Partida "*" -- "0..1" Temporada : ocorre em

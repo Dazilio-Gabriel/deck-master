@@ -1,0 +1,19 @@
+flowchart TB
+  subgraph P["br.faesa.deckmaster"]
+    direction TB
+    V["view<br/><i>(CIH — não cobrado)</i>"]
+    C["controller<br/><i>CGT</i>"]
+    M["model<br/><i>CDP</i>"]
+    D["persistence<br/><i>CGD</i>"]
+    U["util"]
+    S["seguranca"]
+  end
+
+  V --> C
+  C --> M
+  C --> D
+  D --> M
+  C --> S
+  D --> U
+  M --> U
+  S --> D

@@ -1,0 +1,46 @@
+erDiagram
+  PAIS ||--o{ ESTADO : possui
+  ESTADO ||--o{ CIDADE : possui
+  CIDADE ||--o{ ENDERECO : localiza
+  JOGADOR ||--|| ENDERECO : reside
+  JOGADOR ||--o{ TELEFONE : possui
+  JOGADOR ||--|| USUARIO : acessa
+  PERFIL_ACESSO ||--o{ USUARIO : classifica
+  PERFIL_ACESSO ||--o{ PERFIL_FUNCAO : autoriza
+  FUNCAO_SISTEMA ||--o{ PERFIL_FUNCAO : compoe
+
+  RARIDADE ||--o{ CARTA : classifica
+  EXPANSAO ||--o{ CARTA : agrupa
+  CARTA ||--o| CRIATURA : especializa
+  CARTA ||--o| FEITICO : especializa
+  CARTA ||--o| TERRENO : especializa
+  CARTA ||--o{ CARTA_ELEMENTO : possui
+  ELEMENTO ||--o{ CARTA_ELEMENTO : compoe
+
+  JOGADOR ||--o{ ITEM_COLECAO : coleciona
+  CARTA ||--o{ ITEM_COLECAO : colecionada
+
+  FORMATO ||--o{ DECK : rege
+  JOGADOR ||--o{ DECK : monta
+  DECK ||--o{ ITEM_DECK : contem
+  CARTA ||--o{ ITEM_DECK : usada
+
+  EXPANSAO ||--o{ PACOTE : origina
+  JOGADOR ||--o{ ABERTURA_PACOTE : realiza
+  PACOTE ||--o{ ABERTURA_PACOTE : aberto
+  ABERTURA_PACOTE ||--o{ CARTA_SORTEADA : entrega
+  CARTA ||--o{ CARTA_SORTEADA : sorteada
+
+  STATUS_PARTIDA ||--o{ PARTIDA : situa
+  TEMPORADA ||--o{ PARTIDA : ocorre
+  PARTIDA ||--o{ PARTICIPACAO : registra
+  JOGADOR ||--o{ PARTICIPACAO : participa
+  DECK ||--o{ PARTICIPACAO : utilizado
+  PARTIDA ||--o{ TURNO : sequencia
+  JOGADOR ||--o{ TURNO : joga
+  TURNO ||--o{ JOGADA : contem
+  CARTA ||--o{ JOGADA : jogada
+
+  TEMPORADA ||--o{ PONTUACAO_TEMPORADA : apura
+  JOGADOR ||--o{ PONTUACAO_TEMPORADA : pontua
+  DIVISAO ||--o{ PONTUACAO_TEMPORADA : enquadra

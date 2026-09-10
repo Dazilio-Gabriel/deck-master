@@ -1,0 +1,132 @@
+classDiagram
+  direction TB
+
+  class ConexaoBD {
+    -instancia: ConexaoBD$
+    -pool: DataSource
+    -ConexaoBD()
+    +obterInstancia() ConexaoBD$
+    +obterConexao() Connection
+    +liberarConexao(c: Connection) void
+    +encerrarPool() void
+  }
+
+  class IDAO~T~ {
+    <<interface>>
+    +inserir(objeto: T) int
+    +alterar(objeto: T) boolean
+    +excluir(id: int) boolean
+    +buscarPorId(id: int) T
+    +listarTodos() List~T~
+  }
+
+  class DAOGenerico~T~ {
+    <<abstract>>
+    #conexao: ConexaoBD
+    #nomeTabela: String
+    #montarObjeto(rs: ResultSet)* T
+    #montarParametros(ps: PreparedStatement, o: T)* void
+    +inserir(objeto: T) int
+    +alterar(objeto: T) boolean
+    +excluir(id: int) boolean
+    +buscarPorId(id: int) T
+    +listarTodos() List~T~
+  }
+
+  class FabricaDAO {
+    +criarJogadorDAO() JogadorDAO$
+    +criarCartaDAO() CartaDAO$
+    +criarDeckDAO() DeckDAO$
+    +criarColecaoDAO() ColecaoDAO$
+    +criarPartidaDAO() PartidaDAO$
+    +criarTemporadaDAO() TemporadaDAO$
+    +criarUsuarioDAO() UsuarioDAO$
+  }
+
+  class GerenciadorTransacao {
+    -conexao: Connection
+    +iniciar() void
+    +confirmar() void
+    +desfazer() void
+  }
+
+  class JogadorDAO {
+    +montarObjeto(rs: ResultSet) Jogador
+    +buscarPorApelido(apelido: String) Jogador
+    +buscarPorEmail(email: String) Jogador
+    +atualizarSaldos(j: Jogador) boolean
+    +atualizarTotalizadores(j: Jogador) boolean
+  }
+
+  class UsuarioDAO {
+    +montarObjeto(rs: ResultSet) Usuario
+    +buscarPorLogin(login: String) Usuario
+    +registrarAcesso(u: Usuario) boolean
+    +incrementarTentativasFalhas(u: Usuario) boolean
+  }
+
+  class CartaDAO {
+    +montarObjeto(rs: ResultSet) Carta
+    +listarPorExpansao(e: Expansao) List~Carta~
+    +listarPorRaridade(r: Raridade) List~Carta~
+    +listarPorFiltro(f: FiltroColecao) List~Carta~
+  }
+
+  class ColecaoDAO {
+    +montarObjeto(rs: ResultSet) ItemColecao
+    +listarPorJogador(j: Jogador, f: FiltroColecao) List~ItemColecao~
+    +buscarItem(j: Jogador, c: Carta) ItemColecao
+    +creditarCarta(j: Jogador, c: Carta, qtd: int) boolean
+    +debitarCarta(j: Jogador, c: Carta, qtd: int) boolean
+  }
+
+  class DeckDAO {
+    +montarObjeto(rs: ResultSet) Deck
+    +listarPorJogador(j: Jogador) List~Deck~
+    +carregarItens(d: Deck) List~ItemDeck~
+    +salvarItens(d: Deck) boolean
+  }
+
+  class PartidaDAO {
+    +montarObjeto(rs: ResultSet) Partida
+    +listarPorJogador(j: Jogador, limite: int) List~ResumoPartida~
+    +salvarTurno(t: Turno) int
+    +salvarJogada(j: Jogada) int
+    +listarAbandonadas(minutos: int) List~Partida~
+  }
+
+  class TemporadaDAO {
+    +montarObjeto(rs: ResultSet) Temporada
+    +buscarAtiva() Temporada
+    +buscarPontuacao(t: Temporada, j: Jogador) PontuacaoTemporada
+    +salvarPontuacao(p: PontuacaoTemporada) boolean
+    +apurarRanking(t: Temporada, pagina: int) List~LinhaRanking~
+  }
+
+  class ServicoBackup {
+    -destino: String
+    +executar() boolean
+    +restaurar(arquivo: String) boolean
+    +verificarIntegridade(arquivo: String) boolean
+  }
+
+  class ServicoHistorico {
+    +moverPartidasEncerradas(diasCorte: int) int
+    +consultarHistorico(j: Jogador) List~ResumoPartida~
+  }
+
+  IDAO <|.. DAOGenerico
+  DAOGenerico <|-- JogadorDAO
+  DAOGenerico <|-- UsuarioDAO
+  DAOGenerico <|-- CartaDAO
+  DAOGenerico <|-- ColecaoDAO
+  DAOGenerico <|-- DeckDAO
+  DAOGenerico <|-- PartidaDAO
+  DAOGenerico <|-- TemporadaDAO
+  DAOGenerico --> ConexaoBD
+  FabricaDAO ..> JogadorDAO
+  FabricaDAO ..> CartaDAO
+  FabricaDAO ..> DeckDAO
+  GerenciadorTransacao --> ConexaoBD
+  ServicoBackup --> ConexaoBD
+  ServicoHistorico --> PartidaDAO

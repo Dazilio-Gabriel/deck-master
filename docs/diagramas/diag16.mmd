@@ -1,0 +1,21 @@
+flowchart LR
+  JOG(["👤 Jogador"])
+  ADM(["👤 Administrador"])
+  subgraph G2["GerenciarColecao"]
+    direction TB
+    B1(["ConsultarColecao"])
+    B2(["ComprarPacote"])
+    B3(["AbrirPacote"])
+    B4(["ConverterCartaEmFragmentos"])
+    B5(["FabricarCarta"])
+    B6(["CadastrarCarta"])
+    B7(["CadastrarPacote"])
+  end
+  JOG --- B1
+  JOG --- B2
+  JOG --- B3
+  JOG --- B4
+  JOG --- B5
+  ADM --- B6
+  ADM --- B7
+  B3 -. include .-> B1

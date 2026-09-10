@@ -1,0 +1,17 @@
+flowchart LR
+  JOG(["👤 Jogador"])
+  subgraph G4["RealizarPartida"]
+    direction TB
+    D1(["SolicitarPartida"])
+    D2(["RealizarJogada"])
+    D3(["PassarTurno"])
+    D4(["RenderSe"])
+    D5(["EncerrarPartida"])
+    D6(["PausarPartida"])
+  end
+  JOG --- D1
+  JOG --- D2
+  JOG --- D3
+  JOG --- D4
+  JOG --- D6
+  D4 -. include .-> D5

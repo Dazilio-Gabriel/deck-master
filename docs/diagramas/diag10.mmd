@@ -1,0 +1,355 @@
+classDiagram
+  direction LR
+
+  class Jogador {
+    -idJogador: int
+    -apelido: String
+    -nomeCompleto: String
+    -email: String
+    -dataNascimento: LocalDate
+    -dataCadastro: LocalDateTime
+    -saldoCristais: int
+    -saldoFragmentos: int
+    -nivel: int
+    -experiencia: int
+    -totalPartidas: int
+    -totalVitorias: int
+    +getIdJogador() int
+    +getApelido() String
+    +setApelido(apelido: String) void
+    +creditarCristais(quantidade: int) void
+    +debitarCristais(quantidade: int) boolean
+    +creditarFragmentos(quantidade: int) void
+    +debitarFragmentos(quantidade: int) boolean
+    +registrarResultado(venceu: boolean) void
+    +calcularPercentualVitorias() double
+    +ganharExperiencia(pontos: int) void
+  }
+
+  class Endereco {
+    -idEndereco: int
+    -logradouro: String
+    -numero: String
+    -complemento: String
+    -bairro: String
+    -cep: String
+    +formatar() String
+  }
+
+  class Telefone {
+    -idTelefone: int
+    -tipo: String
+    -numero: String
+    +formatar() String
+  }
+
+  class Cidade {
+    -idCidade: int
+    -nome: String
+  }
+  class Estado {
+    -idEstado: int
+    -nome: String
+    -sigla: String
+  }
+  class Pais {
+    -idPais: int
+    -nome: String
+    -sigla: String
+  }
+
+  class Usuario {
+    -idUsuario: int
+    -login: String
+    -senhaHash: String
+    -salt: String
+    -ativo: boolean
+    -tentativasFalhas: int
+    -dataExpiracaoSenha: LocalDate
+    -dataUltimoAcesso: LocalDateTime
+    +autenticar(senha: String) boolean
+    +alterarSenha(atual: String, nova: String) boolean
+    +bloquear() void
+    +possuiFuncao(nome: String) boolean
+  }
+
+  class PerfilAcesso {
+    -idPerfil: int
+    -nome: String
+    -descricao: String
+    +adicionarFuncao(f: FuncaoSistema) void
+    +removerFuncao(f: FuncaoSistema) void
+  }
+
+  class FuncaoSistema {
+    -idFuncao: int
+    -nome: String
+    -casoDeUso: String
+  }
+
+  class Carta {
+    <<abstract>>
+    #idCarta: int
+    #nome: String
+    #textoRegra: String
+    #custoMana: int
+    #caminhoIlustracao: String
+    #ativa: boolean
+    +getIdCarta() int
+    +getNome() String
+    +getCustoMana() int
+    +calcularValorFragmentos() int
+    +descrever()* String
+    +ehJogavel(recursos: int)* boolean
+  }
+
+  class Criatura {
+    -ataque: int
+    -defesa: int
+    -tipoCriatura: String
+    +descrever() String
+    +ehJogavel(recursos: int) boolean
+    +calcularDanoContra(alvo: Criatura) int
+  }
+
+  class Feitico {
+    -efeito: String
+    -instantaneo: boolean
+    -alvoPermitido: String
+    +descrever() String
+    +ehJogavel(recursos: int) boolean
+    +aplicarEfeito(p: Partida) void
+  }
+
+  class Terreno {
+    -recursoGerado: String
+    -quantidadeRecurso: int
+    +descrever() String
+    +ehJogavel(recursos: int) boolean
+    +produzirRecurso() int
+  }
+
+  class Raridade {
+    -idRaridade: int
+    -nome: String
+    -probabilidadeSorteio: double
+    -valorFragmentos: int
+    -corDestaque: String
+  }
+
+  class Elemento {
+    -idElemento: int
+    -nome: String
+    -corHexadecimal: String
+  }
+
+  class Expansao {
+    -idExpansao: int
+    -nome: String
+    -sigla: String
+    -dataLancamento: LocalDate
+    -totalCartas: int
+  }
+
+  class ItemColecao {
+    -idItemColecao: int
+    -quantidade: int
+    -dataPrimeiraObtencao: LocalDateTime
+    -favorita: boolean
+    +incrementar(quantidade: int) void
+    +decrementar(quantidade: int) boolean
+  }
+
+  class Deck {
+    -idDeck: int
+    -nome: String
+    -dataCriacao: LocalDateTime
+    -dataUltimaAlteracao: LocalDateTime
+    -ativo: boolean
+    -quantidadeTotalCartas: int
+    +adicionarCarta(c: Carta, qtd: int) boolean
+    +removerCarta(c: Carta, qtd: int) boolean
+    +validar() ResultadoValidacao
+    +contarCartas() int
+    +renomear(nome: String) void
+  }
+
+  class ItemDeck {
+    -idItemDeck: int
+    -quantidade: int
+    +incrementar(quantidade: int) void
+    +decrementar(quantidade: int) boolean
+  }
+
+  class Formato {
+    -idFormato: int
+    -nome: String
+    -minCartas: int
+    -maxCartas: int
+    -maxCopiasPorCarta: int
+    +validarQuantidade(total: int) boolean
+    +validarCopias(qtd: int) boolean
+  }
+
+  class ResultadoValidacao {
+    -valido: boolean
+    -erros: List~String~
+    -avisos: List~String~
+    +adicionarErro(m: String) void
+    +adicionarAviso(m: String) void
+    +isValido() boolean
+  }
+
+  class Pacote {
+    -idPacote: int
+    -nome: String
+    -precoCristais: int
+    -quantidadeCartas: int
+    -ativo: boolean
+    +abrir(sorteador: SorteadorCartas) List~Carta~
+  }
+
+  class AberturaPacote {
+    -idAbertura: int
+    -dataHora: LocalDateTime
+    -custoPago: int
+    +listarCartasObtidas() List~CartaSorteada~
+  }
+
+  class CartaSorteada {
+    -idCartaSorteada: int
+    -novaParaJogador: boolean
+    -convertidaEmFragmentos: boolean
+  }
+
+  class Partida {
+    -idPartida: int
+    -dataHoraInicio: LocalDateTime
+    -dataHoraFim: LocalDateTime
+    -dataHoraUltimaJogada: LocalDateTime
+    -modo: ModoPartida
+    -numeroTurnos: int
+    -motivoEncerramento: String
+    +iniciar() void
+    +pausar() boolean
+    +retomar() boolean
+    +encerrar(vencedor: Jogador, motivo: String) void
+    +cancelar() void
+    +iniciarNovoTurno(j: Jogador) Turno
+    +obterTurnoCorrente() Turno
+    +ehRanqueada() boolean
+  }
+
+  class StatusPartida {
+    -idStatus: int
+    -nome: String
+    -descricao: String
+    -finalizador: boolean
+  }
+
+  class Participacao {
+    -idParticipacao: int
+    -pontosVidaFinais: int
+    -pontosGanhos: int
+    -venceu: boolean
+    -rendeuSe: boolean
+    +registrarResultado(venceu: boolean, pontos: int) void
+  }
+
+  class Turno {
+    -idTurno: int
+    -numero: int
+    -dataHoraInicio: LocalDateTime
+    -dataHoraFim: LocalDateTime
+    -recursosDisponiveis: int
+    +registrarJogada(j: Jogada) void
+    +encerrar() void
+  }
+
+  class Jogada {
+    -idJogada: int
+    -sequencia: int
+    -tipo: TipoJogada
+    -alvo: String
+    -dataHora: LocalDateTime
+    -danoCausado: int
+    +descrever() String
+  }
+
+  class Temporada {
+    -idTemporada: int
+    -nome: String
+    -dataInicio: LocalDate
+    -dataFim: LocalDate
+    -ativa: boolean
+    +estaAberta(data: LocalDate) boolean
+    +encerrar() void
+    +apurarRanking() List~LinhaRanking~
+  }
+
+  class PontuacaoTemporada {
+    -idPontuacao: int
+    -pontos: int
+    -vitorias: int
+    -derrotas: int
+    -posicaoRanking: int
+    +somarPontos(p: int) void
+    +subtrairPontos(p: int) void
+    +recalcularDivisao(divisoes: List~Divisao~) void
+  }
+
+  class Divisao {
+    -idDivisao: int
+    -nome: String
+    -pontosMinimos: int
+    -pontosMaximos: int
+    -ordem: int
+    +contem(pontos: int) boolean
+  }
+
+  Carta <|-- Criatura
+  Carta <|-- Feitico
+  Carta <|-- Terreno
+
+  Jogador "1" --> "1" Endereco
+  Jogador "1" --> "0..*" Telefone
+  Endereco "*" --> "1" Cidade
+  Cidade "*" --> "1" Estado
+  Estado "*" --> "1" Pais
+
+  Jogador "1" --> "1" Usuario
+  Usuario "*" --> "1" PerfilAcesso
+  PerfilAcesso "*" --> "*" FuncaoSistema
+
+  Carta "*" --> "1" Raridade
+  Carta "*" --> "1" Expansao
+  Carta "*" --> "*" Elemento
+
+  Jogador "1" --> "0..*" ItemColecao
+  Carta "1" --> "0..*" ItemColecao
+
+  Jogador "1" --> "0..*" Deck
+  Deck "1" --> "1..*" ItemDeck
+  Carta "1" --> "0..*" ItemDeck
+  Deck "*" --> "1" Formato
+  Deck ..> ResultadoValidacao
+
+  Pacote "*" --> "1" Expansao
+  Jogador "1" --> "0..*" AberturaPacote
+  AberturaPacote "*" --> "1" Pacote
+  AberturaPacote "1" --> "1..*" CartaSorteada
+  CartaSorteada "*" --> "1" Carta
+
+  Partida "*" --> "1" StatusPartida
+  Partida "1" --> "2" Participacao
+  Participacao "*" --> "1" Jogador
+  Participacao "*" --> "1" Deck
+  Partida "1" --> "0..*" Turno
+  Turno "*" --> "1" Jogador
+  Turno "1" --> "0..*" Jogada
+  Jogada "*" --> "0..1" Carta
+
+  Temporada "1" --> "0..*" PontuacaoTemporada
+  PontuacaoTemporada "*" --> "1" Jogador
+  PontuacaoTemporada "*" --> "1" Divisao
+  Partida "*" --> "0..1" Temporada

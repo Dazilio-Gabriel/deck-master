@@ -1,0 +1,16 @@
+flowchart LR
+  JOG(["👤 Jogador"])
+  ADM(["👤 Administrador"])
+  subgraph G5["GerenciarCompeticao"]
+    direction TB
+    E1(["ConsultarRanking"])
+    E2(["CadastrarTemporada"])
+    E3(["AtualizarPontuacaoTemporada"])
+    E4(["EncerrarTemporada"])
+    E5(["DistribuirRecompensas"])
+  end
+  JOG --- E1
+  ADM --- E2
+  ADM --- E4
+  ADM --- E1
+  E4 -. include .-> E5

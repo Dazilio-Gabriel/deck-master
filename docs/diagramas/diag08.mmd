@@ -1,0 +1,27 @@
+flowchart TB
+  T0["Tela de Logon"] --> T1["Tela Principal (Saguão)"]
+  T1 --> T2["Minha Coleção"]
+  T1 --> T3["Meus Decks"]
+  T1 --> T4["Loja de Pacotes"]
+  T1 --> T5["Jogar"]
+  T1 --> T6["Ranking"]
+  T1 --> T7["Meu Perfil"]
+  T1 --> T8["Ajuda"]
+
+  T2 --> T2a["Detalhe da Carta"]
+  T2a --> T2b["Converter em Fragmentos"]
+  T2 --> T2c["Fabricar Carta"]
+
+  T3 --> T3a["Editor de Deck"]
+  T3a --> T3b["Resultado da Validação"]
+
+  T4 --> T4a["Confirmar Compra"]
+  T4a --> T4b["Abertura de Pacote"]
+
+  T5 --> T5a["Fila de Espera"]
+  T5a --> T5b["Mesa de Partida"]
+  T5b --> T5c["Resultado da Partida"]
+  T5c --> T1
+
+  T7 --> T7a["Alterar Senha"]
+  T7 --> T7b["Histórico de Partidas"]

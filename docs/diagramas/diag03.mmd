@@ -1,0 +1,27 @@
+flowchart LR
+  ADM(["👤 Administrador"])
+
+  subgraph MCB["ManterCadastrosBasicos"]
+    direction TB
+    C1(["CadastrarRaridade"])
+    C2(["CadastrarElemento"])
+    C3(["CadastrarExpansao"])
+    C4(["CadastrarFormatoJogo"])
+    C5(["CadastrarStatusPartida"])
+    C6(["CadastrarDivisao"])
+    C7(["CadastrarTipoJogada"])
+    C8(["CadastrarPais"])
+    C9(["CadastrarEstado"])
+    C10(["CadastrarCidade"])
+  end
+
+  ADM --- C1
+  ADM --- C2
+  ADM --- C3
+  ADM --- C4
+  ADM --- C5
+  ADM --- C6
+  ADM --- C7
+  ADM --- C8
+  ADM --- C9
+  ADM --- C10

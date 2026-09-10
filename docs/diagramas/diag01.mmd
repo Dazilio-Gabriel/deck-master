@@ -1,0 +1,26 @@
+flowchart LR
+  JOG(["👤 Jogador"])
+  ADM(["👤 Administrador"])
+  TMP(["⏱ Temporizador"])
+
+  subgraph SIS["SISTEMA DECK MASTER"]
+    direction TB
+    S1(["GerenciarConta"])
+    S2(["GerenciarColecao"])
+    S3(["GerenciarDeck"])
+    S4(["RealizarPartida"])
+    S5(["GerenciarCompeticao"])
+    S6(["ManterCadastrosBasicos"])
+    S7(["AtenderRequisitosTecnologia"])
+  end
+
+  JOG --- S1
+  JOG --- S2
+  JOG --- S3
+  JOG --- S4
+  JOG --- S5
+  ADM --- S5
+  ADM --- S6
+  ADM --- S7
+  TMP --- S5
+  TMP --- S7

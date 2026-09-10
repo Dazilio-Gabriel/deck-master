@@ -1,0 +1,15 @@
+stateDiagram-v2
+  direction LR
+  state EmAndamento {
+    [*] --> TurnoJogadorA
+    TurnoJogadorA --> TurnoJogadorB : passarTurno()
+    TurnoJogadorB --> TurnoJogadorA : passarTurno()
+
+    state TurnoJogadorA {
+      [*] --> Compra
+      Compra --> Recursos : cartaComprada()
+      Recursos --> Acoes : recursosAcumulados()
+      Acoes --> Acoes : realizarJogada()
+      Acoes --> [*] : encerrarTurno()
+    }
+  }

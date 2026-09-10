@@ -1,0 +1,117 @@
+classDiagram
+  direction TB
+
+  class CtrlCadastrarJogador {
+    -jogadorDAO: JogadorDAO
+    -usuarioDAO: UsuarioDAO
+    +cadastrar(dados: Jogador, login: String, senha: String) Jogador
+    +validarApelidoDisponivel(apelido: String) boolean
+    +validarEmailDisponivel(email: String) boolean
+    +concederConteudoInicial(j: Jogador) void
+  }
+
+  class CtrlEfetuarLogon {
+    -usuarioDAO: UsuarioDAO
+    -gerenciadorSessao: GerenciadorSessao
+    +efetuarLogon(login: String, senha: String) Sessao
+    +efetuarLogoff(s: Sessao) void
+    +alterarSenha(s: Sessao, atual: String, nova: String) boolean
+  }
+
+  class CtrlManterColecao {
+    -colecaoDAO: ColecaoDAO
+    -cartaDAO: CartaDAO
+    +consultar(j: Jogador, f: FiltroColecao) List~ItemColecao~
+    +converterEmFragmentos(j: Jogador, c: Carta, qtd: int) int
+    +fabricarCarta(j: Jogador, c: Carta) boolean
+  }
+
+  class CtrlComprarAbrirPacote {
+    -pacoteDAO: PacoteDAO
+    -colecaoDAO: ColecaoDAO
+    -sorteador: SorteadorCartas
+    +comprar(j: Jogador, p: Pacote, qtd: int) boolean
+    +abrir(j: Jogador, p: Pacote) AberturaPacote
+  }
+
+  class CtrlManterDeck {
+    -deckDAO: DeckDAO
+    -colecaoDAO: ColecaoDAO
+    +criar(j: Jogador, nome: String, f: Formato) Deck
+    +adicionarCarta(d: Deck, c: Carta, qtd: int) ResultadoValidacao
+    +removerCarta(d: Deck, c: Carta, qtd: int) ResultadoValidacao
+    +validar(d: Deck) ResultadoValidacao
+    +salvar(d: Deck) boolean
+    +excluir(d: Deck) boolean
+  }
+
+  class CtrlRealizarPartida {
+    -partidaDAO: PartidaDAO
+    -fila: GerenciadorFilaPartidas
+    -motor: MotorRegrasPartida
+    +solicitarPartida(j: Jogador, d: Deck, modo: ModoPartida) Partida
+    +realizarJogada(p: Partida, j: Jogador, jogada: Jogada) boolean
+    +passarTurno(p: Partida, j: Jogador) Turno
+    +renderSe(p: Partida, j: Jogador) void
+    +encerrar(p: Partida) void
+    +consultarHistorico(j: Jogador) List~ResumoPartida~
+  }
+
+  class CtrlGerenciarCompeticao {
+    -temporadaDAO: TemporadaDAO
+    +cadastrarTemporada(t: Temporada) Temporada
+    +atualizarPontuacao(p: Partida) void
+    +consultarRanking(t: Temporada, pagina: int) List~LinhaRanking~
+    +encerrarTemporada(t: Temporada) void
+  }
+
+  class CtrlManterCadastrosBasicos {
+    -fabricaDAO: FabricaDAO
+    +incluir(entidade: Object) boolean
+    +alterar(entidade: Object) boolean
+    +excluir(entidade: Object) boolean
+    +listar(tipo: Class) List~Object~
+  }
+
+  class CtrlAtenderRequisitosTecnologia {
+    -servicoBackup: ServicoBackup
+    -servicoHistorico: ServicoHistorico
+    +efetuarBackup() boolean
+    +restaurarBackup(arquivo: String) boolean
+    +gerarHistoricoPartidas(diasCorte: int) int
+    +limparPartidasAbandonadas(minutos: int) int
+    +consultarLogAuditoria(inicio: LocalDate, fim: LocalDate) List~String~
+  }
+
+  class GerenciadorSessao {
+    -sessoesAtivas: Map~String, Sessao~
+    +abrir(u: Usuario) Sessao
+    +fechar(token: String) void
+    +validar(token: String) boolean
+    +autorizar(token: String, funcao: String) boolean
+  }
+
+  class GerenciadorFilaPartidas {
+    -fila: Queue~Jogador~
+    +entrar(j: Jogador, d: Deck, modo: ModoPartida) void
+    +sair(j: Jogador) void
+    +buscarOponente(j: Jogador) Jogador
+  }
+
+  class MotorRegrasPartida {
+    +validarJogada(p: Partida, j: Jogada) boolean
+    +aplicarJogada(p: Partida, j: Jogada) void
+    +calcularCombate(atacante: Criatura, defensor: Criatura) int
+    +verificarFimDePartida(p: Partida) boolean
+  }
+
+  class SorteadorCartas {
+    -raridades: List~Raridade~
+    +sortear(p: Pacote) List~Carta~
+    +sortearPorRaridade(r: Raridade, e: Expansao) Carta
+  }
+
+  CtrlRealizarPartida --> GerenciadorFilaPartidas
+  CtrlRealizarPartida --> MotorRegrasPartida
+  CtrlComprarAbrirPacote --> SorteadorCartas
+  CtrlEfetuarLogon --> GerenciadorSessao

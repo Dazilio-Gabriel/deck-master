@@ -1,0 +1,25 @@
+stateDiagram-v2
+  direction LR
+  [*] --> AguardandoOponente : criarPartida()
+
+  AguardandoOponente --> EmAndamento : oponenteEncontrado() / distribuirMaoInicial()
+  AguardandoOponente --> Cancelada : tempoEsperaEsgotado()
+  AguardandoOponente --> Cancelada : cancelarBusca()
+
+  EmAndamento --> Pausada : solicitarPausa() [pausasRestantes > 0]
+  Pausada --> EmAndamento : retomar()
+  Pausada --> Encerrada : tempoPausaEsgotado() / derrotaPorAusencia()
+
+  EmAndamento --> Encerrada : pontosVida <= 0 / apurarResultado()
+  EmAndamento --> Encerrada : renderSe() / apurarResultado()
+  EmAndamento --> Encerrada : tempoJogadaEsgotado() / derrotaPorAusencia()
+  EmAndamento --> Encerrada : limiteTurnosAtingido() / empate()
+
+  Encerrada --> [*]
+  Cancelada --> [*]
+
+  note right of EmAndamento
+    Estado composto: alterna entre
+    TurnoJogadorA e TurnoJogadorB
+    a cada passarTurno()
+  end note

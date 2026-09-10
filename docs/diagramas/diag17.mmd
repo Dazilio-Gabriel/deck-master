@@ -1,0 +1,16 @@
+flowchart LR
+  JOG(["👤 Jogador"])
+  subgraph G3["GerenciarDeck"]
+    direction TB
+    C1(["CriarDeck"])
+    C2(["EditarDeck"])
+    C3(["ValidarDeck"])
+    C4(["ExcluirDeck"])
+    C5(["ConsultarDecks"])
+  end
+  JOG --- C1
+  JOG --- C2
+  JOG --- C4
+  JOG --- C5
+  C1 -. include .-> C3
+  C2 -. include .-> C3

@@ -1,0 +1,18 @@
+flowchart LR
+  subgraph CTRL["br.faesa.deckmaster.controller"]
+    direction TB
+    C1["controller.conta"]
+    C2["controller.colecao"]
+    C3["controller.deck"]
+    C4["controller.partida"]
+    C5["controller.competicao"]
+    C6["controller.cadastro"]
+    C7["controller.tecnologia"]
+  end
+
+  subgraph PERS["br.faesa.deckmaster.persistence"]
+    direction TB
+    D0["persistence.core<br/>ConexaoBD, DAOGenerico,<br/>FabricaDAO, GerenciadorTransacao"]
+    D1["persistence.dao<br/>JogadorDAO, CartaDAO, DeckDAO,<br/>ColecaoDAO, PartidaDAO,<br/>TemporadaDAO, UsuarioDAO"]
+    D2["persistence.backup<br/>ServicoBackup, ServicoHistorico"]
+  end

@@ -1,0 +1,11 @@
+flowchart LR
+  subgraph MODEL["br.faesa.deckmaster.model"]
+    direction TB
+    M1["model.conta<br/>Jogador, Endereco, Telefone,<br/>Cidade, Estado, Pais"]
+    M2["model.carta<br/>Carta, Criatura, Feitico,<br/>Terreno, Raridade, Elemento, Expansao"]
+    M3["model.colecao<br/>ItemColecao, Pacote,<br/>AberturaPacote, CartaSorteada"]
+    M4["model.deck<br/>Deck, ItemDeck, Formato,<br/>ResultadoValidacao"]
+    M5["model.partida<br/>Partida, Participacao, Turno,<br/>Jogada, StatusPartida"]
+    M6["model.competicao<br/>Temporada, PontuacaoTemporada, Divisao"]
+    M7["model.seguranca<br/>Usuario, PerfilAcesso, FuncaoSistema"]
+  end

@@ -1,0 +1,13 @@
+flowchart LR
+  JOG(["👤 Jogador"])
+  subgraph G1["GerenciarConta"]
+    direction TB
+    A1(["CadastrarJogador"])
+    A2(["ConsultarPerfil"])
+    A3(["AlterarPerfil"])
+    A4(["ConsultarHistoricoPartidas"])
+  end
+  JOG --- A1
+  JOG --- A2
+  JOG --- A3
+  JOG --- A4

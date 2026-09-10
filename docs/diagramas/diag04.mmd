@@ -1,0 +1,22 @@
+flowchart TB
+  subgraph CL["CAMADA CLIENTE — máquina do jogador"]
+    A["Aplicação Desktop Java (JavaFX)<br/>Camada View (CIH)"]
+  end
+
+  subgraph SV["CAMADA DE APLICAÇÃO — nuvem (AWS São Paulo)"]
+    B["Servidor de Aplicação Java<br/>Controller (CGT) + Model (CDP)"]
+    C["Servidor de Partidas<br/>WebSocket + Motor de Regras"]
+  end
+
+  subgraph DB["CAMADA DE DADOS — nuvem (AWS São Paulo)"]
+    D[("SGBD PostgreSQL 16<br/>Base operacional")]
+    E[("Base histórica")]
+    F[["Armazenamento de objetos<br/>backups e ilustrações"]]
+  end
+
+  A -->|"HTTPS / REST (JSON)"| B
+  A <-->|"WSS (WebSocket seguro)"| C
+  B -->|JDBC| D
+  C -->|JDBC| D
+  B -->|JDBC| E
+  B --> F

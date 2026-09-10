@@ -1,0 +1,91 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1046
+{\fonttbl{\f0\froman\fcharset0 Times New Roman;}{\f1\fswiss\fcharset0 Arial;}{\f2\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red89\green89\blue89;}
+\paperw11906\paperh16838\margl1701\margr1134\margt1417\margb1417
+\f0\fs24
+\pard\qc\sa240\b\fs26 PROPOSTA DE TRABALHO PR\'c1TICO \'96 PROJETO ORIENTADO A OBJETOS\b0\fs24\par
+\pard\sa0\par
+\pard\ql\sa40\b Componentes do Grupo: (m\'e1ximo de 5 alunos)\b0\par
+\pard\ql\sa120\i\fs20\cf1 (Informar os nomes dos componentes do grupo).\cf0\i0\fs24\par
+\pard\ql\sa40 Gabriel Fanchiotti\par
+\pard\ql\sa40 [NOME DO ALUNO 2]\par
+\pard\ql\sa40 [NOME DO ALUNO 3]\par
+\pard\ql\sa40 [NOME DO ALUNO 4]\par
+\pard\ql\sa40 [NOME DO ALUNO 5]\par
+\pard\sa0\par
+\pard\ql\sa40\b Sistema/Jogo Proposto:\b0\par
+\pard\ql\sa120\i\fs20\cf1 (Informar o nome do sistema/jogo proposto).\cf0\i0\fs24\par
+\pard\ql\sa40 Deck Master \'96 Jogo Digital de Cartas Colecion\'e1veis Competitivo\par
+\pard\sa0\par
+\pard\ql\sa40\b Organiza\'e7\'e3o:\b0\par
+\pard\ql\sa120\i\fs20\cf1 (Informar o nome da organiza\'e7\'e3o e a \'e1rea de neg\'f3cio que ser\'e1 atendida pelo sistema/jogo proposto).\cf0\i0\fs24\par
+\pard\ql\sa40 Mesa Viva Studio Ltda. \'96 est\'fadio independente de desenvolvimento e opera\'e7\'e3o de jogos digitais.\par
+\pard\qj\fi709\sa120 \'c1rea de neg\'f3cio atendida: jogos digitais competitivos online (games as a service), que compreende a produ\'e7\'e3o e a curadoria do conte\'fado do jogo (cartas, expans\'f5es e formatos), a opera\'e7\'e3o da economia virtual (venda e abertura de pacotes), a condu\'e7\'e3o das partidas online entre os jogadores e a administra\'e7\'e3o das temporadas competitivas e do ranking.\par
+\pard\sa0\par
+\pard\ql\sa40\b Endere\'e7o:\b0\par
+\pard\ql\sa120\i\fs20\cf1 (Informar o endere\'e7o da organiza\'e7\'e3o).\cf0\i0\fs24\par
+\pard\ql\sa40 Av. Nossa Senhora da Penha, 1495 \'96 Sala 802 \'96 Ed. Trade Center\par
+\pard\ql\sa40 Bairro Santa L\'facia \'96 Vit\'f3ria/ES \'96 CEP 29056-243\par
+\pard\sa0\par
+\pard\ql\sa40\b Usu\'e1rio:\b0\par
+\pard\ql\sa120\i\fs20\cf1 (Informar nome, telefones e email de contato do usu\'e1rio do sistema/jogo)\cf0\i0\fs24\par
+\pard\ql\sa40 Nome: M\'e1rio de Souza \'96 Gerente de Produto da Mesa Viva Studio Ltda.\par
+\pard\ql\sa40 Telefones: (27) 3222-1188 / (27) 99988-7766\par
+\pard\ql\sa40 E-mail: mario.souza@mesavivastudio.com.br\par
+\pard\sa0\par
+\pard\ql\sa40\b Descri\'e7\'e3o do Mini-mundo (escopo do sistema/jogo):\b0\par
+\pard\ql\sa120\i\fs20\cf1 Para os alunos de Jogos: Descrever, EM NO M\'cdNIMO MEIA P\'c1GINA (OBRIGATORIAMENTE), como ser\'e1 o cen\'e1rio/script/roteiro do jogo que ser\'e1 desenvolvido, ou seja, o seu escopo.\cf0\i0\fs24\par
+\pard\qj\fi709\sa120 Deck Master \'e9 um jogo digital de cartas colecion\'e1veis no qual duas pessoas se enfrentam em partidas de turnos alternados, cada uma utilizando um conjunto de cartas de sua propriedade montado previamente, chamado de deck. O jogo funciona de forma cont\'ednua, como um servi\'e7o online: as pessoas mant\'eam uma conta pessoal, acumulam cartas ao longo do tempo, montam e remontam seus decks e disputam partidas contra outras pessoas conectadas.\par
+\pard\qj\fi709\sa120 Para come\'e7ar a jogar, a pessoa cria uma conta informando um apelido, seu nome completo, seu e-mail, sua data de nascimento e seu endere\'e7o, e recebe uma quantidade inicial de cristais, que \'e9 a moeda usada dentro do jogo, e um conjunto b\'e1sico de cartas. Cada carta pertence a uma expans\'e3o, tem uma raridade (comum, incomum, rara, \'e9pica ou lend\'e1ria), est\'e1 associada a um ou mais elementos e \'e9 de um dos tr\'eas tipos existentes: criatura, feiti\'e7o ou terreno. As criaturas possuem valores de ataque e defesa e permanecem em campo; os feiti\'e7os produzem um efeito imediato ou cont\'ednuo e s\'e3o descartados ap\'f3s o uso; os terrenos geram os recursos que permitem pagar o custo de invoca\'e7\'e3o das demais cartas.\par
+\pard\qj\fi709\sa120 A cole\'e7\'e3o de uma pessoa \'e9 o conjunto de cartas que ela possui, com a quantidade de c\'f3pias de cada uma. Novas cartas s\'e3o obtidas comprando pacotes com cristais e abrindo esses pacotes: cada pacote entrega uma quantidade fixa de cartas sorteadas conforme a probabilidade associada a cada raridade. Cartas repetidas al\'e9m do limite permitido podem ser convertidas em fragmentos, que servem para fabricar cartas espec\'edficas que a pessoa ainda n\'e3o possui.\par
+\pard\qj\fi709\sa120 A partir de sua cole\'e7\'e3o, a pessoa monta seus decks. Um deck tem um nome, pertence a um formato de jogo e s\'f3 \'e9 considerado v\'e1lido quando respeita as regras desse formato: quantidade m\'ednima e m\'e1xima de cartas e n\'famero m\'e1ximo de c\'f3pias da mesma carta. Uma pessoa pode manter v\'e1rios decks salvos e escolher qual deles levar\'e1 para cada partida.\par
+\pard\qj\fi709\sa120 As partidas podem ser casuais ou ranqueadas. Ao solicitar uma partida, a pessoa entra em uma fila de espera at\'e9 que um oponente compat\'edvel seja encontrado; a partir da\'ed a partida \'e9 iniciada e os dois lados jogam em turnos alternados. Em seu turno, quem est\'e1 ativo compra uma carta, acumula recursos e realiza jogadas: invocar criaturas, lan\'e7ar feiti\'e7os, posicionar terrenos e atacar o oponente. Cada pessoa come\'e7a com uma quantidade fixa de pontos de vida, e a partida termina quando os pontos de vida de um dos lados chegam a zero, quando algu\'e9m se rende ou quando o tempo limite \'e9 atingido. Uma partida tamb\'e9m pode ser pausada por tempo limitado e pode ser cancelada caso nenhum oponente seja encontrado.\par
+\pard\qj\fi709\sa120 O jogo \'e9 organizado em temporadas, cada uma com data de in\'edcio e de fim. Nas partidas ranqueadas o resultado altera a pontua\'e7\'e3o da pessoa na temporada corrente: vit\'f3rias somam pontos e derrotas subtraem. A pontua\'e7\'e3o define a divis\'e3o em que a pessoa se encontra (bronze, prata, ouro, diamante ou mestre) e a sua posi\'e7\'e3o no ranking geral. Ao final da temporada o ranking \'e9 encerrado, as recompensas s\'e3o distribu\'eddas conforme a divis\'e3o alcan\'e7ada e uma nova temporada \'e9 iniciada.\par
+\pard\qj\fi709\sa120 A curadoria do conte\'fado \'e9 feita pelo administrador do jogo, respons\'e1vel por cadastrar novas cartas, expans\'f5es, raridades, elementos, formatos e pacotes, por abrir e encerrar as temporadas e por acompanhar o hist\'f3rico das partidas realizadas.\par
+\pard\sa0\par
+\pard\ql\sa40\b Principais Problemas encontrados (para Sistema de Informa\'e7\'e3o) / Objetivos a serem atendidos (para Game):\b0\par
+\pard\ql\sa120\i\fs20\cf1 (Descrever os principais problemas encontrados na \'e1rea de neg\'f3cio que ser\'e1 atendida pelo sistema proposto ou os objetivos a serem atendidos pelo jogo que ser\'e1 desenvolvido).\cf0\i0\fs24\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Proporcionar partidas competitivas de cartas por turnos entre dois jogadores online, com regras claras, aplicadas automaticamente e iguais para os dois lados.\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Estimular a perman\'eancia do jogador por meio do colecionismo, oferecendo uma cole\'e7\'e3o pessoal que cresce de forma progressiva e \'e9 preservada entre as sess\'f5es de jogo.\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Oferecer profundidade estrat\'e9gica na constru\'e7\'e3o de decks, com valida\'e7\'e3o autom\'e1tica das regras de cada formato, sem exigir que o jogador memorize as restri\'e7\'f5es.\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Garantir progress\'e3o mensur\'e1vel e justa por meio de temporadas, pontua\'e7\'e3o, divis\'f5es e ranking p\'fablico.\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Sustentar a economia virtual do jogo (cristais, pacotes e fragmentos) de forma equilibrada e audit\'e1vel.\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Assegurar que nenhum progresso seja perdido: cole\'e7\'e3o, decks, hist\'f3rico de partidas e pontua\'e7\'e3o devem persistir e ser recuper\'e1veis por meio de backup.\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Impedir o acesso indevido \'e0 conta e \'e0s cartas de terceiros por meio de identifica\'e7\'e3o, autentica\'e7\'e3o e autoriza\'e7\'e3o dos usu\'e1rios.\par
+\pard\sa0\par
+\pard\ql\sa40\b Principais Fun\'e7\'f5es:\b0\par
+\pard\ql\sa120\i\fs20\cf1 (Listar aqui as principais fun\'e7\'f5es do sistema/jogo proposto, de forma itemizada.)\cf0\i0\fs24\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Cadastrar Jogador\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Efetuar Logon no Sistema\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Efetuar Altera\'e7\'e3o de Senha\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Manter Perfil do Jogador\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Cadastrar Carta\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Cadastrar Expans\'e3o\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Cadastrar Raridade\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Cadastrar Elemento\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Cadastrar Formato de Jogo\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Cadastrar Pacote\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Comprar Pacote\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Abrir Pacote\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Consultar Cole\'e7\'e3o\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Converter Carta Repetida em Fragmentos\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Fabricar Carta\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Criar Deck\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Editar Deck\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Validar Deck\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Excluir Deck\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Consultar Decks do Jogador\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Solicitar Partida\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Realizar Jogada\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Render-se na Partida\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Encerrar Partida\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Consultar Hist\'f3rico de Partidas\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Cadastrar Temporada\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Encerrar Temporada\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Atualizar Pontua\'e7\'e3o da Temporada\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Consultar Ranking\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Cadastrar Usu\'e1rio\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Cadastrar Perfil de Acesso\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Efetuar Backup da Base de Jogadores e Cole\'e7\'f5es\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab Gerar Hist\'f3rico de Partidas Encerradas\par
+}
