@@ -19,7 +19,10 @@ public class Criatura extends Carta {
     public String getTipoCriatura() { return tipoCriatura; }
 
     public int calcularDanoContra(Criatura alvo) {
-        return Math.max(0, ataque - (alvo == null ? 0 : 0));
+        if (alvo == null) {
+            return ataque;
+        }
+        return Math.max(0, ataque - alvo.getDefesa());
     }
 
     @Override

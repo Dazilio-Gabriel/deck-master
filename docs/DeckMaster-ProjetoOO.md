@@ -2117,3 +2117,22 @@ Checklist do que **não** dá para eu fechar sozinho — precisa de você ou do 
       quiser outro balanceamento.
 - [ ] **Referências bibliográficas** — o template cita Pressman (2002), Magela (1998), Falbo (2003)
       e Ambler. Se a professora pedir seção de referências, montar a partir desses.
+
+## Onde o protótipo diverge da especificação
+
+Registrado aqui para você citar na defesa, ou alinhar depois:
+
+- **`LadoPartida`** — classe que não está no Diagrama de Classes do CDP. Guarda o estado de um
+  jogador *durante* a partida (pontos de vida, mão, campo, monte). Na especificação esse estado
+  está implícito em `Partida`; no código precisou virar classe. Vale acrescentar ao diagrama.
+- **Persistência em memória** — `RepositorioMemoria` no lugar dos DAOs JDBC da seção 7.3. As
+  interfaces já têm a forma do CGD projetado, então a troca não mexe no Model nem no Controller.
+- **Cadastros básicos como `enum`** — `Raridade`, `Elemento`, `Formato`, `StatusPartida`,
+  `ModoPartida` e `TipoJogada` estão como enum em vez de classes de cadastro. Em Java enum é
+  classe, mas isso tira do administrador a possibilidade de manter esses dados sem recompilar,
+  que é o que a seção 2.3 promete.
+- **Formatos** — `PADRAO` está com 60 a 250 cartas e 3 cópias; `RAPIDO` com 20 a 40 e 2 cópias.
+  Números arbitrados, ajustar se o grupo quiser outro balanceamento.
+- **Combate simplificado** — o dano do lado atacante é somado e as criaturas defensoras absorvem
+  na ordem em que estão no campo. Não há escolha de bloqueio nem de alvo pelo jogador.
+- **Segurança, temporada e ranking** — especificados nas seções 3, 7 e 8, mas fora do protótipo.
