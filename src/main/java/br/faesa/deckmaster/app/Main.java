@@ -28,7 +28,7 @@ public class Main {
 
         titulo("DECK MASTER - prototipo de console");
 
-        Jogador jogador = new Jogador(1, "Dazilio", "Gabriel Fanchiotti", "gabriel@exemplo.com",
+        Jogador jogador = new Jogador(1, "Dazilio", "Gabriel Dazilio Fanchiotti", "gabriel@exemplo.com",
                 LocalDate.of(2003, 5, 12), 3000);
         Jogador rival = new Jogador(2, "RivalBot", "Oponente Automatico", "bot@exemplo.com",
                 LocalDate.of(2000, 1, 1), 3000);

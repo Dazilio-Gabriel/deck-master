@@ -13,11 +13,10 @@
 
 ## Componentes do Grupo (máximo de 5 alunos)
 
-1. Gabriel Fanchiotti
-2. `[NOME DO ALUNO 2]`
-3. `[NOME DO ALUNO 3]`
-4. `[NOME DO ALUNO 4]`
-5. `[NOME DO ALUNO 5]`
+1. Gabriel Dazilio Fanchiotti
+
+> O template fixa apenas um **máximo** de 5 alunos; não há mínimo, e a instrução do Moodle
+> ("basta que um aluno do grupo faça a postagem") também não exige dupla. Trabalho individual.
 
 ## Sistema/Jogo Proposto
 
@@ -152,13 +151,9 @@ e por acompanhar o histórico de partidas.
 
 ```
 CENTRO UNIVERSITÁRIO FAESA
-CURSO DE GRADUAÇÃO EM SISTEMAS DE INFORMAÇÃO
+CURSO DE GRADUAÇÃO EM CIÊNCIA DA COMPUTAÇÃO
 
-GABRIEL FANCHIOTTI
-[NOME DO ALUNO 2]
-[NOME DO ALUNO 3]
-[NOME DO ALUNO 4]
-[NOME DO ALUNO 5]
+GABRIEL DAZILIO FANCHIOTTI
 
 UM SISTEMA DE JOGO DIGITAL DE CARTAS COLECIONÁVEIS — DECK MASTER
 
@@ -170,14 +165,14 @@ VITÓRIA
 
 | | |
 |---|---|
-| **FORNECEDORES** | Gabriel Fanchiotti; [Aluno 2]; [Aluno 3]; [Aluno 4]; [Aluno 5] |
+| **FORNECEDORES** | Gabriel Dazilio Fanchiotti |
 | **CLIENTES** | Mário de Souza (Gerente de Produto); Mesa Viva Studio Ltda. |
 
 ## Histórico de Revisões
 
 | Nº | Data | Descrição das mudanças | Razão das mudanças | Autor |
 |---|---|---|---|---|
-| 01 | 10/09/2025 | Primeira versão | Elaboração inicial do Projeto OO | Gabriel Fanchiotti |
+| 01 | 10/09/2025 | Primeira versão | Elaboração inicial do Projeto OO | Gabriel Dazilio Fanchiotti |
 
 ---
 
@@ -2087,8 +2082,11 @@ Checklist do que **não** dá para eu fechar sozinho — precisa de você ou do 
 
 ## Bloqueantes (antes de postar)
 
-- [ ] **Nomes dos alunos 2 a 5** — hoje estão como `[NOME DO ALUNO n]` na Proposta e na capa.
-- [ ] **Curso** — a capa diz "SISTEMAS DE INFORMAÇÃO". Trocar se for Jogos Digitais / CC / TADS.
+- [ ] **Confirmar com a professora se CC pode entregar um jogo.** O template separa a descrição
+      do mini-mundo em "Para alunos de SI/TADS/CC" (descrever a área de negócio) e "Para os alunos
+      de Jogos" (descrever o roteiro do jogo). Como o curso é Ciência da Computação, a proposta usa
+      a linha de SI/TADS/CC, e o texto do mini-mundo descreve o funcionamento do domínio — serve
+      para as duas leituras. Ainda assim, vale perguntar antes de seguir.
 - [ ] **Organização, endereço e usuário** — Mesa Viva Studio, o endereço e o Mário de Souza são
       fictícios (o template pede uma organização e um usuário de contato). Se a professora cobrar
       cliente real, trocar pelos dados verdadeiros.

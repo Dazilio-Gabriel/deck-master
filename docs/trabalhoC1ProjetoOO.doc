@@ -7,11 +7,7 @@
 \pard\sa0\par
 \pard\ql\sa40\b Componentes do Grupo: (m\'e1ximo de 5 alunos)\b0\par
 \pard\ql\sa120\i\fs20\cf1 (Informar os nomes dos componentes do grupo).\cf0\i0\fs24\par
-\pard\ql\sa40 Gabriel Fanchiotti\par
-\pard\ql\sa40 [NOME DO ALUNO 2]\par
-\pard\ql\sa40 [NOME DO ALUNO 3]\par
-\pard\ql\sa40 [NOME DO ALUNO 4]\par
-\pard\ql\sa40 [NOME DO ALUNO 5]\par
+\pard\ql\sa40 Gabriel Dazilio Fanchiotti\par
 \pard\sa0\par
 \pard\ql\sa40\b Sistema/Jogo Proposto:\b0\par
 \pard\ql\sa120\i\fs20\cf1 (Informar o nome do sistema/jogo proposto).\cf0\i0\fs24\par
@@ -34,7 +30,7 @@
 \pard\ql\sa40 E-mail: mario.souza@mesavivastudio.com.br\par
 \pard\sa0\par
 \pard\ql\sa40\b Descri\'e7\'e3o do Mini-mundo (escopo do sistema/jogo):\b0\par
-\pard\ql\sa120\i\fs20\cf1 Para os alunos de Jogos: Descrever, EM NO M\'cdNIMO MEIA P\'c1GINA (OBRIGATORIAMENTE), como ser\'e1 o cen\'e1rio/script/roteiro do jogo que ser\'e1 desenvolvido, ou seja, o seu escopo.\cf0\i0\fs24\par
+\pard\ql\sa120\i\fs20\cf1 Para alunos de SI/TADS/CC: Descrever, EM NO M\'cdNIMO MEIA P\'c1GINA (OBRIGATORIAMENTE), o mini-mundo que o sistema atender\'e1, ou seja, descrever aqui como \'e9 o funcionamento da \'e1rea de neg\'f3cio (o processo de neg\'f3cio) que ser\'e1 atendida pelo sistema.\cf0\i0\fs24\par
 \pard\qj\fi709\sa120 Deck Master \'e9 um jogo digital de cartas colecion\'e1veis no qual duas pessoas se enfrentam em partidas de turnos alternados, cada uma utilizando um conjunto de cartas de sua propriedade montado previamente, chamado de deck. O jogo funciona de forma cont\'ednua, como um servi\'e7o online: as pessoas mant\'eam uma conta pessoal, acumulam cartas ao longo do tempo, montam e remontam seus decks e disputam partidas contra outras pessoas conectadas.\par
 \pard\qj\fi709\sa120 Para come\'e7ar a jogar, a pessoa cria uma conta informando um apelido, seu nome completo, seu e-mail, sua data de nascimento e seu endere\'e7o, e recebe uma quantidade inicial de cristais, que \'e9 a moeda usada dentro do jogo, e um conjunto b\'e1sico de cartas. Cada carta pertence a uma expans\'e3o, tem uma raridade (comum, incomum, rara, \'e9pica ou lend\'e1ria), est\'e1 associada a um ou mais elementos e \'e9 de um dos tr\'eas tipos existentes: criatura, feiti\'e7o ou terreno. As criaturas possuem valores de ataque e defesa e permanecem em campo; os feiti\'e7os produzem um efeito imediato ou cont\'ednuo e s\'e3o descartados ap\'f3s o uso; os terrenos geram os recursos que permitem pagar o custo de invoca\'e7\'e3o das demais cartas.\par
 \pard\qj\fi709\sa120 A cole\'e7\'e3o de uma pessoa \'e9 o conjunto de cartas que ela possui, com a quantidade de c\'f3pias de cada uma. Novas cartas s\'e3o obtidas comprando pacotes com cristais e abrindo esses pacotes: cada pacote entrega uma quantidade fixa de cartas sorteadas conforme a probabilidade associada a cada raridade. Cartas repetidas al\'e9m do limite permitido podem ser convertidas em fragmentos, que servem para fabricar cartas espec\'edficas que a pessoa ainda n\'e3o possui.\par

@@ -4,14 +4,10 @@
 \paperw11906\paperh16838\margl1701\margr1134\margt1417\margb1134
 \f0\fs24
 \pard\qc\sa80\b \fs28 CENTRO UNIVERSIT\'c1RIO FAESA\b0\fs24\par
-\pard\qc\sa80\b \fs26 CURSO DE GRADUA\'c7\'c3O EM SISTEMAS DE INFORMA\'c7\'c3O\b0\fs24\par
+\pard\qc\sa80\b \fs26 CURSO DE GRADUA\'c7\'c3O EM CI\'caNCIA DA COMPUTA\'c7\'c3O\b0\fs24\par
 \pard\qc\sa80\par
 \pard\qc\sa80\par
-\pard\qc\sa80 \fs24 GABRIEL FANCHIOTTI\fs24\par
-\pard\qc\sa80 \fs24 [NOME DO ALUNO 2]\fs24\par
-\pard\qc\sa80 \fs24 [NOME DO ALUNO 3]\fs24\par
-\pard\qc\sa80 \fs24 [NOME DO ALUNO 4]\fs24\par
-\pard\qc\sa80 \fs24 [NOME DO ALUNO 5]\fs24\par
+\pard\qc\sa80 \fs24 GABRIEL DAZILIO FANCHIOTTI\fs24\par
 \pard\qc\sa80\par
 \pard\qc\sa80\par
 \pard\qc\sa80\par
@@ -34,7 +30,7 @@
 \row
 \trowd\trgaph80\trleft0\clbrdrt\brdrs\brdrw10\clbrdrl\brdrs\brdrw10\clbrdrb\brdrs\brdrw10\clbrdrr\brdrs\brdrw10\cellx4535\clbrdrt\brdrs\brdrw10\clbrdrl\brdrs\brdrw10\clbrdrb\brdrs\brdrw10\clbrdrr\brdrs\brdrw10\cellx9070
 \pard\intbl\fs18 {\b FORNECEDORES}\cell
-\pard\intbl\fs18 Gabriel Fanchiotti; [Aluno 2]; [Aluno 3]; [Aluno 4]; [Aluno 5]\cell
+\pard\intbl\fs18 Gabriel Dazilio Fanchiotti\cell
 \row
 \trowd\trgaph80\trleft0\clbrdrt\brdrs\brdrw10\clbrdrl\brdrs\brdrw10\clbrdrb\brdrs\brdrw10\clbrdrr\brdrs\brdrw10\cellx4535\clbrdrt\brdrs\brdrw10\clbrdrl\brdrs\brdrw10\clbrdrb\brdrs\brdrw10\clbrdrr\brdrs\brdrw10\cellx9070
 \pard\intbl\fs18 {\b CLIENTES}\cell
@@ -54,7 +50,7 @@
 \pard\intbl\fs18 10/09/2025\cell
 \pard\intbl\fs18 Primeira vers\'e3o\cell
 \pard\intbl\fs18 Elabora\'e7\'e3o inicial do Projeto OO\cell
-\pard\intbl\fs18 Gabriel Fanchiotti\cell
+\pard\intbl\fs18 Gabriel Dazilio Fanchiotti\cell
 \row
 \pard\sa120\par
 \pard\sa120\par
@@ -27264,8 +27260,8 @@ d99d77de2917ac566ba7a60ad181792cfef4a73f8d1d3bd6ed764f9932e5e0c183020000843179b2
 \pard\ql\sb240\sa120\b\fs30 O QUE AINDA FALTA\b0\fs24\par
 \pard\qj\sa120 Checklist do que {\b n\'e3o} d\'e1 para eu fechar sozinho \'97 precisa de voc\'ea ou do grupo:\par
 \pard\ql\sb240\sa120\b\fs28 Bloqueantes (antes de postar)\b0\fs24\par
-\pard\fi-284\li709\sa0{\f2\'b7}\tab {\b Nomes dos alunos 2 a 5} \'97 hoje est\'e3o como {\f1\fs21 [NOME DO ALUNO n]} na Proposta e na capa.\par
-\pard\fi-284\li709\sa0{\f2\'b7}\tab {\b Curso} \'97 a capa diz "SISTEMAS DE INFORMA\'c7\'c3O". Trocar se for Jogos Digitais / CC / TADS.\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab {\b Confirmar com a professora se CC pode entregar um jogo.} O template separa a descri\'e7\'e3o\par
+\pard\qj\sa120 do mini-mundo em "Para alunos de SI/TADS/CC" (descrever a \'e1rea de neg\'f3cio) e "Para os alunos de Jogos" (descrever o roteiro do jogo). Como o curso \'e9 Ci\'eancia da Computa\'e7\'e3o, a proposta usa a linha de SI/TADS/CC, e o texto do mini-mundo descreve o funcionamento do dom\'ednio \'97 serve para as duas leituras. Ainda assim, vale perguntar antes de seguir.\par
 \pard\fi-284\li709\sa0{\f2\'b7}\tab {\b Organiza\'e7\'e3o, endere\'e7o e usu\'e1rio} \'97 Mesa Viva Studio, o endere\'e7o e o M\'e1rio de Souza s\'e3o\par
 \pard\qj\sa120 fict\'edcios (o template pede uma organiza\'e7\'e3o e um usu\'e1rio de contato). Se a professora cobrar cliente real, trocar pelos dados verdadeiros.\par
 \pard\ql\sb240\sa120\b\fs28 Para a entrega da Especifica\'e7\'e3o de Projeto\b0\fs24\par
@@ -27284,4 +27280,17 @@ d99d77de2917ac566ba7a60ad181792cfef4a73f8d1d3bd6ed764f9932e5e0c183020000843179b2
 \pard\qj\sa120 corte do hist\'f3rico, 30 min de abandono. S\'e3o valores que eu arbitrei; ajustar se o grupo quiser outro balanceamento.\par
 \pard\fi-284\li709\sa0{\f2\'b7}\tab {\b Refer\'eancias bibliogr\'e1ficas} \'97 o template cita Pressman (2002), Magela (1998), Falbo (2003)\par
 \pard\qj\sa120 e Ambler. Se a professora pedir se\'e7\'e3o de refer\'eancias, montar a partir desses.\par
+\pard\ql\sb240\sa120\b\fs28 Onde o prot\'f3tipo diverge da especifica\'e7\'e3o\b0\fs24\par
+\pard\qj\sa120 Registrado aqui para voc\'ea citar na defesa, ou alinhar depois:\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab {\b `LadoPartida`} \'97 classe que n\'e3o est\'e1 no Diagrama de Classes do CDP. Guarda o estado de um\par
+\pard\qj\sa120 jogador {\i durante} a partida (pontos de vida, m\'e3o, campo, monte). Na especifica\'e7\'e3o esse estado est\'e1 impl\'edcito em {\f1\fs21 Partida}; no c\'f3digo precisou virar classe. Vale acrescentar ao diagrama.\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab {\b Persist\'eancia em mem\'f3ria} \'97 {\f1\fs21 RepositorioMemoria} no lugar dos DAOs JDBC da se\'e7\'e3o 7.3. As\par
+\pard\qj\sa120 interfaces j\'e1 t\'eam a forma do CGD projetado, ent\'e3o a troca n\'e3o mexe no Model nem no Controller.\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab {\b Cadastros b\'e1sicos como `enum`} \'97 {\f1\fs21 Raridade}, {\f1\fs21 Elemento}, {\f1\fs21 Formato}, {\f1\fs21 StatusPartida},\par
+\pard\qj\sa120 {\f1\fs21 ModoPartida} e {\f1\fs21 TipoJogada} est\'e3o como enum em vez de classes de cadastro. Em Java enum \'e9 classe, mas isso tira do administrador a possibilidade de manter esses dados sem recompilar, que \'e9 o que a se\'e7\'e3o 2.3 promete.\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab {\b Formatos} \'97 {\f1\fs21 PADRAO} est\'e1 com 60 a 250 cartas e 3 c\'f3pias; {\f1\fs21 RAPIDO} com 20 a 40 e 2 c\'f3pias.\par
+\pard\qj\sa120 N\'fameros arbitrados, ajustar se o grupo quiser outro balanceamento.\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab {\b Combate simplificado} \'97 o dano do lado atacante \'e9 somado e as criaturas defensoras absorvem\par
+\pard\qj\sa120 na ordem em que est\'e3o no campo. N\'e3o h\'e1 escolha de bloqueio nem de alvo pelo jogador.\par
+\pard\fi-284\li709\sa0{\f2\'b7}\tab {\b Seguran\'e7a, temporada e ranking} \'97 especificados nas se\'e7\'f5es 3, 7 e 8, mas fora do prot\'f3tipo.\par
 }
