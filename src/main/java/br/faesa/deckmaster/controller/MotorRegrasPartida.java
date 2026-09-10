@@ -62,7 +62,7 @@ public class MotorRegrasPartida {
             bloqueio += defensora.getDefesa();
             abatidas.add(defensora);
         }
-        oponente.getCampo().removeAll(abatidas);
+        oponente.removerDoCampo(abatidas);
 
         int danoDireto = poder - bloqueio;
         oponente.receberDano(danoDireto);

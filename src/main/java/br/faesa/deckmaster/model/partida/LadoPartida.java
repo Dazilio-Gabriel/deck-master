@@ -34,9 +34,9 @@ public class LadoPartida {
     public Jogador getJogador() { return jogador; }
     public Deck getDeck() { return deck; }
     public int getPontosVida() { return pontosVida; }
-    public List<Carta> getMao() { return mao; }
-    public List<Criatura> getCampo() { return campo; }
-    public List<Terreno> getTerrenos() { return terrenos; }
+    public List<Carta> getMao() { return Collections.unmodifiableList(mao); }
+    public List<Criatura> getCampo() { return Collections.unmodifiableList(campo); }
+    public List<Terreno> getTerrenos() { return Collections.unmodifiableList(terrenos); }
     public boolean isRendeuSe() { return rendeuSe; }
     public void render() { this.rendeuSe = true; }
 
@@ -82,6 +82,13 @@ public class LadoPartida {
 
     public void descartar(Carta carta) {
         mao.remove(carta);
+    }
+
+    // remove uma copia por entrada: a mesma carta pode estar varias vezes em campo
+    public void removerDoCampo(List<Criatura> criaturas) {
+        for (Criatura criatura : criaturas) {
+            campo.remove(criatura);
+        }
     }
 
     public int calcularRecursosDoTurno(int numeroTurnoDoLado) {

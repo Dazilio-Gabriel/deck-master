@@ -4,6 +4,7 @@ import br.faesa.deckmaster.model.conta.Jogador;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Turno {
@@ -26,7 +27,7 @@ public class Turno {
     public LocalDateTime getDataHoraInicio() { return dataHoraInicio; }
     public LocalDateTime getDataHoraFim() { return dataHoraFim; }
     public int getRecursosDisponiveis() { return recursosDisponiveis; }
-    public List<Jogada> getJogadas() { return jogadas; }
+    public List<Jogada> getJogadas() { return Collections.unmodifiableList(jogadas); }
 
     public boolean consumirRecursos(int custo) {
         if (custo > recursosDisponiveis) {
